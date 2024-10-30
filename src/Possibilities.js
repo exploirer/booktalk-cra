@@ -49,7 +49,7 @@ export default function Possibilities() {
                 обновлениями новинок книг и рецензий
               </div>
               <div className="buttons">
-                <a href="#" className="telegram">telegram</a>
+              <button onClick={yourHandler} className="telegram">telegram</button>
                 <img src={telegramLogo} alt="Telegram" />
               </div>
             </div>

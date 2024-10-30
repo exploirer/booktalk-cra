@@ -3,6 +3,15 @@ import leftSideImage from './images/left_side.svg';  // Путь к изобра
 import footerLogo from './images/footer_logo.svg';    // Путь к логотипу
 
 export default function Reviews() {
+  const handleSubscription = () => {
+    // Обработка подписки на рассылку
+  };
+
+  const handlePageNavigation = (page) => {
+    // Обработка навигации по страницам
+    console.log(`Navigate to ${page}`);
+  };
+
   return (
     <>
       <section className="booktalk" id="booktalk">
@@ -18,7 +27,9 @@ export default function Reviews() {
                 чтобы первыми узнать о запуске <br />
                 платформы
               </div>
-              <a href="#" className="follow">Подписаться на рассылку</a>
+              <button onClick={handleSubscription} className="follow">
+                Подписаться на рассылку
+              </button>
             </div>
             <div className="right_side">
               <img src={leftSideImage} alt="Left Side" />
@@ -31,26 +42,26 @@ export default function Reviews() {
         <div className="container">
           <div className="row">
             <div className="item">
-              <a href="#" className="pages">ОСНОВНОЕ</a>
-              <a href="#" className="pages">Сайт</a>
-              <a href="#" className="pages">О нас</a>
-              <a href="#" className="pages">Обратная связь</a>
+              <button onClick={() => handlePageNavigation('main')} className="pages">ОСНОВНОЕ</button>
+              <button onClick={() => handlePageNavigation('site')} className="pages">Сайт</button>
+              <button onClick={() => handlePageNavigation('about')} className="pages">О нас</button>
+              <button onClick={() => handlePageNavigation('feedback')} className="pages">Обратная связь</button>
             </div>
             <div className="item">
-              <a href="#" className="pages">ДОПОЛНИТЕЛЬНО</a>
-              <a href="#" className="pages">Блог</a>
-              <a href="#" className="pages">Частые вопросы</a>
-              <a href="#" className="pages">Отзывы</a>
+              <button onClick={() => handlePageNavigation('additional')} className="pages">ДОПОЛНИТЕЛЬНО</button>
+              <button onClick={() => handlePageNavigation('blog')} className="pages">Блог</button>
+              <button onClick={() => handlePageNavigation('faq')} className="pages">Частые вопросы</button>
+              <button onClick={() => handlePageNavigation('reviews')} className="pages">Отзывы</button>
             </div>
             <div className="item">
-              <a href="#" className="pages">ООО «BOOKTALK NN»</a>
-              <a href="#" className="pages">Политика конфиденциальности</a>
-              <a href="#" className="pages">2024 г.</a>
+              <button onClick={() => handlePageNavigation('company')} className="pages">ООО «BOOKTALK NN»</button>
+              <button onClick={() => handlePageNavigation('privacy')} className="pages">Политика конфиденциальности</button>
+              <button onClick={() => handlePageNavigation('year2024')} className="pages">2024 г.</button>
             </div>
             <div className="item">
-              <a href="#" className="logo">
+              <button className="logo" onClick={() => handlePageNavigation('home')}>
                 <img src={footerLogo} alt="Логотип" />
-              </a>
+              </button>
             </div>
           </div>
         </div>

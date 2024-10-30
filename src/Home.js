@@ -16,7 +16,7 @@ function Home() {
                             делитесь впечатлениями и общайтесь <br />
                             с другими любителями литературы
                         </div>
-                        <a href="#" className="join">присоединиться</a>
+                        <button onClick={yourHandler} className="join">присоединиться</button>
                     </div>
                     <div className="right_side">
                          <img src={booksImage} alt="Книги" /> {/* Используйте импортированное изображение */}
