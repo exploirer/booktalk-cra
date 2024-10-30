@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { HashRouter as Router, Link } from 'react-router-dom';
 import './App.css'; // Импортируем CSS файл
 import Home from './Home'; // Импортируем Home
 import Possibilities from './Possibilities';
